@@ -1,0 +1,130 @@
+:root {
+  --primary-green: #6bbe44;
+  --primary-dark: #2c3e50;
+  --primary-blue: #0079a5;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --text-white: #ffffff;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
+  --border-light: #e0e0e0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.App {
+  min-height: 100vh;
+  padding-top: 70px; /* Add padding to account for fixed header */
+  background-color: var(--background-light); /* Match hero background to remove white gap */
+}
+
+/* Page container styles */
+.page-container {
+  min-height: calc(100vh - 70px - 100px); /* Adjust for header and footer height */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+}
+
+.btn-secondary:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px; /* was 20px */
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 30px; /* reduced from 60px */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0; /* tightened from 80px */
+  }
+
+  /* Remove extra gaps inside sections by preventing margin-collapsing */
+  .section > *:first-child { margin-top: 0; }
+  .section > *:last-child { margin-bottom: 0; }
+
+  /* Apply the same collapse prevention to key sections that don't use the generic .section class */
+  .who-are-we .container > *:first-child,
+  .how-to-use .container > *:first-child,
+  .working-process .container > *:first-child { margin-top: 0; }
+
+  .who-are-we .container > *:last-child,
+  .how-to-use .container > *:last-child,
+  .working-process .container > *:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
