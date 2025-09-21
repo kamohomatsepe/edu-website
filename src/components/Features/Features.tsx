@@ -24,26 +24,26 @@ interface StoreBadge {
 
 const Features: React.FC = () => {
   // Sample data for testimonials
-  const testimonials: Testimonial[] = [
-    {
-      name: "Mrs. Adebayo School Administrator, Lagos",
-      website: "",
-      review: "The fee collection system is a game-changer. Parents can now pay easily, and we can track everything instantly.",
-      avatar: "/pic14.png?height=80&width=80",
-    },
-    {
-      name: "Mrs. Okonkwo, Proprietor, Enugu",
-      website: "",
-      review: "With Educesol, I always know how my children are performing. The app keeps me informed in real time.",
-      avatar: "/pic15.png?height=80&width=80",
-    },
-    {
-      name: "Mr. Alvan Ikoku, Proprietor, Abuja",
-      website: "",
-      review: "My students are now excelling in their studies and feeling more empowered than ever before.",
-      avatar: "/pic16.png?height=80&width=80",
-    },
-  ];
+  // const testimonials: Testimonial[] = [
+  //   {
+  //     name: "Mrs. Adebayo School Administrator, Lagos",
+  //     website: "",
+  //     review: "The fee collection system is a game-changer. Parents can now pay easily, and we can track everything instantly.",
+  //     avatar: "/pic14.png?height=80&width=80",
+  //   },
+  //   {
+  //     name: "Mrs. Okonkwo, Proprietor, Enugu",
+  //     website: "",
+  //     review: "With Educesol, I always know how my children are performing. The app keeps me informed in real time.",
+  //     avatar: "/pic15.png?height=80&width=80",
+  //   },
+  //   {
+  //     name: "Mr. Alvan Ikoku, Proprietor, Abuja",
+  //     website: "",
+  //     review: "My students are now excelling in their studies and feeling more empowered than ever before.",
+  //     avatar: "/pic16.png?height=80&width=80",
+  //   },
+  // ];
 
   // Sample data for download steps
   const downloadSteps: DownloadStep[] = [
@@ -164,7 +164,7 @@ const Features: React.FC = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="reviews-section">
+      {/* <section className="reviews-section">
         <div className="container">
           <div className="reviews-header">
             <div className="reviews-count">
@@ -194,7 +194,7 @@ const Features: React.FC = () => {
           
           <p className="mission-statement">Underpinning Educesol's success is a relentless commitment to innovation and a deep understanding of the evolving needs of modern learners. By continuously investing in research, technology, and pedagogical best practices, Educesol ensures that its offerings...</p>
         </div>
-      </section>
+      </section> */}
 
       {/* Download Section */}
       <section className="download-section">
