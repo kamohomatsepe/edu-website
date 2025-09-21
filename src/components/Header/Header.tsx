@@ -31,7 +31,9 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <img src="/Logo.png" alt="Educesol Logo" className="logo-icon" />
+            <Link to="/" className="logo-link">
+              <img src="/Logo.png" alt="Educesol Logo" className="logo-icon" />
+            </Link>
           </div>
 
           <nav className={`nav ${isMobileMenuOpen ? "nav-open" : ""}`}>
