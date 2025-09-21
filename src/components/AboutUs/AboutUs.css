@@ -5,13 +5,13 @@
 }
 
 section {
-    margin-top: 10rem;
+    margin-top: 0;
 }
 
 .top {
     display: flex;
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 2rem;
 }
 
 .image {
@@ -183,17 +183,18 @@ img {
 
 @media screen and (max-width: 567px) {
     section {
-        margin-top: -100px;
+        margin-top: 0;
+        padding: 0 16px;
     }
 
     .welcome {
-        width: 90%;
-        margin: 0 0.5rem;
+        width: 100%;
+        margin: 0 auto;
         padding-bottom: 3rem;
     }
 
     .image {
-        width: 90%;
+        width: 100%;
         margin: 0 auto 0;
     }
 
