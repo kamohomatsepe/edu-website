@@ -80,9 +80,14 @@ const WorkingProcess: React.FC = () => {
   ];
 
   return (
-    <section className="working-process">
+    <section className="working-process ">
       <div className="container">
-        <h2 className="section-title">The Working Process</h2>
+        <h2
+            className="section-title"
+            style={{ color: "var(--primary-white)" }}
+          >
+            The Working Process
+          </h2>
         
         <div className="process-grid">
           {processItems.map((item, index) => (

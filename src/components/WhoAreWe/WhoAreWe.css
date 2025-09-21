@@ -2,6 +2,7 @@
   background-color: var(--primary-blue);
   padding: 60px 0;
   color: var(--text-white);
+  
 }
 
 .who-are-we-content {
@@ -42,6 +43,7 @@
 @media (max-width: 768px) {
   .who-are-we {
     padding: 50px 0;
+    margin-bottom: 60px;
   }
 
   .who-are-we-content {

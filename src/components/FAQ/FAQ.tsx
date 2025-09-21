@@ -24,7 +24,7 @@ const FAQ: React.FC = () => {
         "The platform is designed for schools of all sizes—primary, secondary, and tertiary institutions—whether private or public.",
     },
     {
-      question: "DOES EDUCESOL WORK WITHOUT STRONG INTERNENT?",
+      question: "DOES EDUCESOL WORK WITHOUT STRONG INTERNET?",
       answer:
         "Yes. Educesol Basic is optimised to work in areas with limited connectivity, making it ideal for schools in developing regions.",
     },

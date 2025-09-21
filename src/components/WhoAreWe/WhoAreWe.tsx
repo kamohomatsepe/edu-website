@@ -3,7 +3,7 @@ import "./WhoAreWe.css"
 
 const WhoAreWe: React.FC = () => {
   return (
-    <section className="who-are-we">
+    <section className="who-are-we" style={{ marginBottom: "0px", paddingBottom: "0px" }}>
       <div className="container">
         <div className="who-are-we-content">
           <div className="team-image">

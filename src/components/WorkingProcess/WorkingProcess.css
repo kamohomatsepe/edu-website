@@ -65,11 +65,10 @@
   }
 } 
 .working-process {
-  padding: 3rem 0;
+  padding: 10px 0 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
   color: white;
   position: relative;
   text-align: center;
