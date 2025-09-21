@@ -1,8 +1,7 @@
 .faq {
   background-color: var(--background-white);
 }
-
-.faq-list {
+#faq-list {
   max-width: 800px;
   margin: 0 auto;
 }

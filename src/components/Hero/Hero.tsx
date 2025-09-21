@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
              Learning with Smart School Management
             </h1>
             <p className="hero-subtitle">
-              Educesol Basic is Nigeria’s first mobile-first school management solution — designed to reduce costs,
+              Educesol Basic is Nigeria's first mobile-first school management solution — designed to reduce costs,
               <br />
              eliminate manual errors, and connect parents, teachers, and administrators in real time.
             </p>
