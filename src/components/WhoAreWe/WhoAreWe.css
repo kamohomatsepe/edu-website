@@ -2,7 +2,10 @@
   background-color: var(--primary-blue);
   padding: 60px 0;
   color: var(--text-white);
-  
+  /* Remove any extra space below this section */
+  margin-bottom: 0;
+  /* Keep a little space under the CTA button inside this section */
+  padding-bottom: 24px;
 }
 
 .who-are-we-content {
@@ -10,6 +13,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+}
+
+/* Add a bit of breathing room below the CTA button */
+.who-are-we .btn {
+  margin-bottom: 16px;
 }
 
 .team-image {
@@ -43,7 +51,9 @@
 @media (max-width: 768px) {
   .who-are-we {
     padding: 50px 0;
-    margin-bottom: 60px;
+    /* Keep sections tight together on mobile as well */
+    margin-bottom: 0;
+    padding-bottom: 28px; /* a touch more breathing room under the button */
   }
 
   .who-are-we-content {

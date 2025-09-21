@@ -65,7 +65,9 @@
   }
 } 
 .working-process {
-  padding: 10px 0 10px;
+  /* Remove any extra gap above this section and prevent margin-collapsing */
+  margin-top: 0;
+  padding: 0 0 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,6 +93,11 @@
   padding: 0 1rem;
   position: relative;
   z-index: 1;
+}
+
+/* Ensure the first child inside the section does not introduce a top margin */
+.working-process .container > *:first-child {
+  margin-top: 0;
 }
 
 .section-title {

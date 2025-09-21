@@ -107,6 +107,13 @@
     grid-template-columns: 1fr;
     /* gap: 40px; */
     text-align: center;
+    max-width: none; /* allow full-width child bleed */
+  }
+
+  /* Remove side padding from the container in the hero so the image can go edge-to-edge */
+  .hero .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .hero-title {
@@ -120,5 +127,16 @@
   .hero-image {
     order: -1;
     margin-top: 0px;
+    /* Make the image area full-bleed */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .hero-main-image {
+    width: 100%;
+    max-width: none; /* don't cap image width on mobile */
+    display: block;  /* remove any inline spacing */
+    border-radius: 0; /* ensure edges are flush */
   }
 }
