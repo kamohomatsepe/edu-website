@@ -69,7 +69,11 @@
   padding-top: 20px;
   text-align: center;
 }
-
+.quick-links a {
+  text-decoration: none;  
+  color: #fff;           
+  font-weight: 500;       
+}
 .footer-bottom p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
