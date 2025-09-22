@@ -67,7 +67,8 @@
 .working-process {
   /* Remove any extra gap above this section and prevent margin-collapsing */
   margin-top: 0;
-  padding: 0 0 10px;
+  /* Add comfortable vertical padding on desktop */
+  padding: 50px 0 56px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,7 +103,7 @@
 
 .section-title {
   font-size: 2.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* a little more space below the heading */
   color: white;
   position: relative;
   display: inline-block;
@@ -122,8 +123,8 @@
 .process-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 5rem; /* a bit more breathing room between cards */
+  margin-bottom: 2rem;
 }
 
 .process-card {
@@ -161,7 +162,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 1.25rem; /* more spacing from grid */
 }
 
 .new-project-btn:hover {
@@ -180,6 +181,6 @@
   }
 
   .working-process {
-    padding: 3rem 0;
+    padding: 5rem 0; /* keep generous spacing on mobile */
   }
 }
