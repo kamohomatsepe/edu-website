@@ -1,5 +1,6 @@
 import type React from "react";
 
+
 const WhoAreWe: React.FC = () => {
   return (
     <>
