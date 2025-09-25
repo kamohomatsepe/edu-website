@@ -43,30 +43,39 @@ const Hero: React.FC = () => {
           
           {/* Right Column - Image */}
          <div className="order-1 lg:order-2 mt-20 lg:mt-0">
-           <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[650px] rounded-lg flex items-center justify-center"
-     style={{
-       backgroundImage: "url('/hero-bg.png')",
-       backgroundSize: "cover",
-       backgroundPosition: "center",
-     }}
->
-  {/* Icons row */}
-  <div className="absolute top-4 left-0 right-0 flex justify-between px-4">
-    <div className="bg-[#1AA939] rounded">
-      <img src="/hero-icon.png" alt="Left Icon" className="w-12 h-12 sm:w-16 sm:h-16" />
-    </div>
-    <div className="bg-[#1AA939] rounded">
-      <img src="/hero-icon2.png" alt="Right Icon" className="w-12 h-12 sm:w-16 sm:h-16 p-1" />
-    </div>
-  </div>
+        <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[650px] rounded-lg overflow-hidden"
+            style={{
+              backgroundImage: "url('/hero-bg.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+        >
+          {/* Left Icon */}
+          <div className="absolute top-4 left-2 sm:top-8 sm:left-6 bg-[#1AA939] rounded">
+            <img 
+              src="/hero-icon.png" 
+              alt="Left Icon" 
+              className="w-12 h-12 sm:w-16 sm:h-16" 
+            />
+          </div>
 
-  {/* Main image */}
-  <img 
-    src="/hero-main.png" 
-    alt="Hero Image Placeholder"
-    className="w-full h-full object-cover rounded-lg"
-  />
-</div>
+          {/* Main Image */}
+          <img 
+            src="/hero-main.png" 
+            alt="Hero Image Placeholder"
+            className="w-full h-full object-contain sm:object-cover rounded-lg"
+          />
+
+          {/* Right Icon */}
+          <div className="absolute top-4 right-2 sm:top-8 sm:right-6 bg-[#1AA939] rounded">
+            <img 
+              src="/hero-icon2.png" 
+              alt="Right Icon" 
+              className="w-12 h-12 sm:w-16 sm:h-16 p-1" 
+            />
+          </div>
+        </div>
+
 
           </div>
           
