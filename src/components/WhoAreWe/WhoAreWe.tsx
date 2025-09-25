@@ -1,5 +1,4 @@
-import type React from "react"
-import "./WhoAreWe.css"
+import type React from "react";
 
 const WhoAreWe: React.FC = () => {
   return (
@@ -24,7 +23,7 @@ const WhoAreWe: React.FC = () => {
           <div className="order-2 lg:order-2 space-y-6 lg:space-y-8">
             
             {/* Header */}
-            <p className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#fff] leading-tight">
+            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#fff] leading-tight">
               Who we are 
             </p>
             

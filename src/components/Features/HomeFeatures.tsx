@@ -32,7 +32,7 @@ const HomeFeatures: React.FC = () => {
   return (
     <section className="features section" id="features">
       <div className="container">
-        <h2 className="section-title text-[#1AA939]" t>
+        <h2 className="section-title text-[#1AA939]" >
           Key Features
         </h2>
 

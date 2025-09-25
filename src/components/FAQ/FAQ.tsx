@@ -1,8 +1,5 @@
-"use client"
-
 import type React from "react"
 import { useState } from "react"
-import "./FAQ.css"
 
 interface FAQItem {
   question: string
@@ -43,7 +40,7 @@ const FAQ: React.FC = () => {
   }
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 mb-5">
   <div className="max-w-4xl mx-auto px-4">
     <h2 className="text-4xl font-bold  text-[#1AA939] text-center mb-8">FAQ's</h2>
 

@@ -1,5 +1,4 @@
 import type React from "react"
-import "./Footer.css"
 import type { JSX } from "react"
 
 interface FooterSection {
@@ -42,22 +41,34 @@ const Footer: React.FC = () => {
       title: "CONTACT DETAILS",
       content: [
         <div key="contact" className="contact-info">
-          <div className="contact-item">
-            <span className="contact-icon">🌐</span>
-            <span>www.yoursite.com</span>
+          <div className="contact-item mt-2">
+            <span className="contact-icon">
+              <img src="/globe.svg" alt="website" />
+            </span>
+            <span>www.educesol.com</span>
           </div>
-          <div className="contact-item">
-            <span className="contact-icon">✉️</span>
+          <div className="contact-item mt-2">
+            <span className="contact-icon">
+              <span className="contact-icon">
+              <img src="mail.svg" alt="mail" />
+            </span>
+            </span>
             <span>contact@metrobluets.com</span>
           </div>
-          <div className="contact-item">
-            <span className="contact-icon">📞</span>
+          <div className="contact-item mt-2">
+            <span className="contact-icon">
+              <span className="contact-icon">
+              <img src="phone.svg" alt="phone" />
+            </span>
+            </span>
             <span>+234 816 252 4860 | +234 907 912 5273</span>
           </div>
-          <div className="contact-item">
-            <span className="contact-icon">📍</span>
+          <div className="contact-item ">
+            <span className="contact-icon">
+              <img src="location.svg" alt="location" />
+            </span>
             <span>MetroBlue Tech System Ltd (Official developer of Educesol)
-322 Road, Opposite H-Close, Festac Town, Lagos, Nigeria</span>
+                322 Road, Opposite H-Close, Festac Town, Lagos, Nigeria</span>
           </div>
         </div>,
       ],
@@ -70,20 +81,21 @@ const Footer: React.FC = () => {
     {/* Top content */}
     <div className="grid gap-8 md:gap-10 lg:gap-12 mb-10 md:mb-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       {footerSections.map((section, index) => (
-        <div key={index} className="flex flex-col text-center md:text-left">
-          <h3 className="text-lg font-bold mb-5 relative inline-block after:content-[''] after:block after:w-12 after:h-[3px] after:bg-green-600 after:mt-2 after:mx-auto md:after:mx-0">
-            {section.title}
-          </h3>
-          <div className="text-white/80 leading-relaxed">
-            {Array.isArray(section.content) && typeof section.content[0] === "string"
-              ? section.content.map((item, itemIndex) => (
-                  <p key={itemIndex} className="mb-3 text-sm">
-                    {item}
-                  </p>
-                ))
-              : section.content}
-          </div>
+        <div key={index} className="flex flex-col text-left">
+        <h3 className="text-lg font-bold mb-5 relative inline-block after:content-[''] after:block after:w-12 after:h-[3px] after:bg-green-600 after:mt-2">
+          {section.title}
+        </h3>
+        <div className="text-white/80 leading-relaxed">
+          {Array.isArray(section.content) && typeof section.content[0] === "string"
+            ? section.content.map((item, itemIndex) => (
+                <p key={itemIndex} className="mb-3 text-sm">
+                  {item}
+                </p>
+              ))
+            : section.content}
         </div>
+      </div>
+
       ))}
     </div>
 

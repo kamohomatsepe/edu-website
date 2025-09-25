@@ -1,5 +1,4 @@
 import type React from "react"
-import "./Hero.css"
 import { Link } from "react-router-dom"
 
 const Hero: React.FC = () => {
@@ -26,23 +25,24 @@ const Hero: React.FC = () => {
             </p>
             
             {/* Buttons Container */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-              <button className="px-6 py-3 sm:px-8 sm:py-4 bg-[#101046] text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-[#191969] transition-colors duration-200">
-                 <Link to="/contact">
-                    Register Now
-                 </Link>
-              </button>
-              <button className="px-6 py-3 sm:px-8 sm:py-4 border bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#147529] transition-colors duration-200">
-                <Link to="/features">
-                  Learn More
-                </Link>
-              </button>
-            </div>
+          <div className="flex flex-row sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-4">
+            <button className="w-auto px-6 py-3 sm:px-8 sm:py-4 bg-[#101046] text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-[#191969] transition-colors duration-200">
+              <Link to="/contact">
+                Register Now
+              </Link>
+            </button>
+            <button className="w-auto px-6 py-3 sm:px-8 sm:py-4 border bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#147529] transition-colors duration-200">
+              <Link to="/features">
+                Learn More
+              </Link>
+            </button>
+          </div>
+
             
           </div>
           
           {/* Right Column - Image */}
-          <div className="order-1 lg:order-2">
+         <div className="order-1 lg:order-2 mt-20 lg:mt-0">
             <div 
                 className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[650px]  rounded-lg flex items-center justify-center"
                   style={{
@@ -52,8 +52,8 @@ const Hero: React.FC = () => {
                 }}
                 >
                      {/* Left Icon */}
-              <div className="absolute top-2 left-9 bg-[#1AA939] rounded">
-                <img src="/hero-icon.png" alt="Left Icon" className="w-16 h-16 p-1" />
+              <div className="absolute top-25 left-9 bg-[#1AA939] rounded">
+                <img src="/hero-icon.png" alt="Left Icon" className="w-16 h-16 " />
               </div>
               <img 
                 src="/hero-main.png" 
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                 className="w-full h-full object-cover rounded-lg"
               />
                {/* Right Icon */}
-              <div className="absolute top-2 right-9 bg-[#1AA939] rounded">
+              <div className="absolute top-25 right-9 bg-[#1AA939] rounded">
                 <img src="/hero-icon2.png" alt="Right Icon" className="w-16 h-16 p-1  " />
               </div>
             </div>

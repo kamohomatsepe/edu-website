@@ -40,7 +40,7 @@ const WorkingProcess: React.FC = () => {
     <>
     {/* The working process */}
           <section 
-            className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-cover  bg-center bg-no-repeat relative"
+            className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-cover mb-10  bg-center bg-no-repeat relative"
             style={{
               backgroundImage: "url('/working-process.png')",
               backgroundSize: "cover",
@@ -48,12 +48,12 @@ const WorkingProcess: React.FC = () => {
             }}
           >
       {/* Background overlay for better text readability */}
-      <div className="absolute inset-0 backdrop-brightness-50"></div>
+      <div className="absolute inset-0 backdrop-brightness-40"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto p-3">
         
         {/* Main Heading */}
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-12 lg:mb-16 mt-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             The Working Process
           </h2>
@@ -82,7 +82,7 @@ const WorkingProcess: React.FC = () => {
         
         
         <div className="flex justify-center">
-          <button className="px-8 py-4 sm:px-10 sm:py-5 bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-base sm:text-lg hover:text-[#1AA939] hover:bg-[#fff] transition-colors duration-200 shadow-lg">
+          <button className="px-8 py-4 sm:px-10 sm:py-5 bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-base sm:text-lg hover:text-[#1AA939] hover:bg-[#fff] transition-colors duration-200 shadow-lg mb-5">
             Start New Project
           </button>
         </div>

@@ -59,7 +59,7 @@ const whyDataRight = [
   return (
     <>
       {/* Why Eduscesol */}
-        <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 mb-10">
       <div className="max-w-7xl mx-auto">
         
         {/* Main Header */}

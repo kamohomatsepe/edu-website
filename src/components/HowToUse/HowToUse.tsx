@@ -31,7 +31,7 @@ const HowToUse: React.FC = () => {
 
   return (
     <section className="bg-[#101046] text-white py-16 md:py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           
           {/* Phone Mockup */}
@@ -44,7 +44,8 @@ const HowToUse: React.FC = () => {
           </div>
 
           {/* Steps */}
-          <div className="text-center md:text-left">
+          <div className="text-left ">
+
             <h2 className="text-3xl md:text-4xl font-bold text-[#1AA939] mb-8 p-3">
               HOW TO USE THE APP
             </h2>
@@ -53,7 +54,7 @@ const HowToUse: React.FC = () => {
               {steps.map((step, index) => (
                 <div key={index}>
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
-                    <span className="text-[#1AA939] font-bold mr-2">{step.number}</span>
+                    <span className="text-[#fff] font-bold mr-2">{step.number}</span>
                     {step.title}
                   </h3>
                   <p className="text-white/90 leading-relaxed text-sm md:text-base text-justify">
