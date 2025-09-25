@@ -52,9 +52,9 @@ const Hero: React.FC = () => {
           >
   {/* Left Icon */}
   <div className="absolute top-12 left-3 sm:left-6 z-20">
-    <div className="w-8 h-6 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
+    <div className="w-16 h-16 p-4 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
       <img
-        src="/hero-icon.png"
+        src="/hero-icon.svg"
         alt="Left Icon"
         className="w-full h-full object-contain"
       />
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
   {/* Right Icon */}
     <div className="absolute top-12 right-3 sm:right-6 z-20">
-    <div className="w-8 h-6 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
+    <div className="w-16 h-16 p-4 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
       <img
         src="/hero-icon2.png"
         alt="Right Icon"
