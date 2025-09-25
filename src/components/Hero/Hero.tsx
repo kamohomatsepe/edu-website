@@ -44,19 +44,21 @@ const Hero: React.FC = () => {
           {/* Right Column - Image */}
          <div className="order-1 lg:order-2 mt-20 lg:mt-0">
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[650px] rounded-lg overflow-hidden"
-  style={{
-    backgroundImage: "url('/hero-bg.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
+            style={{
+              backgroundImage: "url('/hero-bg.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
   {/* Left Icon */}
-  <div className="absolute top-4 left-6 sm:top-8 sm:left-8 md:left-12 bg-[#1AA939] rounded z-10">
-    <img 
-      src="/hero-icon.png" 
-      alt="Left Icon" 
-      className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" 
-    />
+  <div className="absolute top-12 left-3 sm:left-6 z-20">
+    <div className="w-8 h-6 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
+      <img
+        src="/hero-icon.png"
+        alt="Left Icon"
+        className="w-full h-full object-contain"
+      />
+    </div>
   </div>
 
   {/* Main Image Container */}
@@ -69,12 +71,14 @@ const Hero: React.FC = () => {
   </div>
 
   {/* Right Icon */}
-  <div className="absolute top-4 right-6 sm:top-8 sm:right-8 md:right-12 bg-[#1AA939] rounded z-10">
-    <img 
-      src="/hero-icon2.png" 
-      alt="Right Icon" 
-      className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 p-1" 
-    />
+    <div className="absolute top-12 right-3 sm:right-6 z-20">
+    <div className="w-8 h-6 sm:w-12 md:w-16 rounded-full bg-[#1AA939] flex items-center justify-center overflow-hidden">
+      <img
+        src="/hero-icon2.png"
+        alt="Right Icon"
+        className="w-full h-full object-contain"
+      />
+    </div>
   </div>
 </div>
 
