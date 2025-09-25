@@ -66,8 +66,8 @@ const WorkingProcess: React.FC = () => {
               key={feature.id}
               className="flex flex-col items-center text-center space-y-4"
             >
-              <div className="bg-[#1AA939] rounded-lg  overflow-hidden">
-                <img src={feature.imgSrc} alt={feature.imgAlt} className="w-20 h-20 p-2" />
+              <div className="bg-[#1AA939] rounded-lg  overflow-hidden flex items-center justify-center w-20 h-20">
+                <img src={feature.imgSrc} alt={feature.imgAlt} className="max-w-full max-h-full object-contain p-2" />
               </div>
               <h3 className="text-xl sm:text-2xl font-semibold text-white">
                 {feature.title}
