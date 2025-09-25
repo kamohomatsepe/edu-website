@@ -1,108 +1,92 @@
-// import type React from "react"
-// import "./WorkingProcess.css"
 
-// interface ProcessStep {
-//   icon: string
-//   title: string
-//   description: string
-// }
-
-// const WorkingProcess: React.FC = () => {
-//   const processSteps: ProcessStep[] = [
-//     {
-//       icon: "/image.png?height=60&width=60",
-//       title: "Result and Report",
-//       description: "Enabling informed decision-making and fostering continuous improvement across various realms.",
-//     },
-//     {
-//       icon: "/image.png?height=60&width=60",
-//       title: "Activity Management",
-//       description: "Focuses on optimizing project workflows, enhancing collaboration, and ensuring efficient resource.",
-//     },
-//     {
-//       icon: "/image.png?height=60&width=60",
-//       title: "Payment Process",
-//       description:
-//         "Authorizing the transaction, and confirming the payment to complete a purchase securely and efficiently.",
-//     },
-//   ]
-
-//   return (
-//     <section className="working-process">
-//       <div className="working-process-overlay">
-//         <div className="container">
-//           <h2 className="working-process-title">The Working Process</h2>
-
-//           <div className="process-grid">
-//             {processSteps.map((step, index) => (
-//               <div key={index} className="process-card">
-//                 <div className="process-icon">
-//                   <img src={step.icon || "/image.png"} alt={`${step.title} icon`} />
-//                 </div>
-//                 <h3 className="process-title">{step.title}</h3>
-//                 <p className="process-description">{step.description}</p>
-//               </div>
-//             ))}
-//           </div>
-
-//           <div className="process-action">
-//             <button className="btn btn-primary">Start New Project</button>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default WorkingProcess
 import React from 'react';
-import './WorkingProcess.css';
-
-interface ProcessItem {
-  title: string;
-  description: string;
-}
+// interface ProcessItem {
+//   title: string;
+//   description: string;
+// }
 
 const WorkingProcess: React.FC = () => {
-  const processItems: ProcessItem[] = [
-    {
-      title: "Result and Report",
-      description: "Existing informed decision-making and fostering continued improvement across various fields"
-    },
-    {
-      title: "Activity Management",
-      description: "Focuses on optimising context workflow, ensuring collaborative, and ensuring efficient resource"
-    },
-    {
-      title: "Keyword Process",
-      description: "Authorised the transaction, and confirming the payment to complete a particular security and efficiently."
-    }
-  ];
-
+  
+  const processData = [
+  {
+    id: 1,
+    imgSrc: "/wp-1.png",
+    imgAlt: "Feature 1",
+    title: "Result and Report",
+    description:
+      "Existing informed decision-making and fostering continued improvement across various fields",
+  },
+  {
+    id: 2,
+    imgSrc: "/wp-2.png",
+    imgAlt: "Feature 2",
+    title: "Activity Management",
+    description:
+      "Focuses on optimising context workflow, ensuring collaborative, and ensuring efficient resource allocation.",
+  },
+  {
+    id: 3,
+    imgSrc: "/wp-3.png",
+    imgAlt: "Feature 3",
+    title: "Keyword Process",
+    description:
+      "Authorised the transaction, and confirming the payment to complete a particular security and efficiently.",
+  },
+];
   return (
-    <section className="working-process ">
-      <div className="container">
-        <h2
-            className="section-title"
-            style={{ color: "var(--primary-white)" }}
+    <>
+    {/* The working process */}
+          <section 
+            className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-cover  bg-center bg-no-repeat relative"
+            style={{
+              backgroundImage: "url('/working-process.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 backdrop-brightness-50"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto">
+        
+        {/* Main Heading */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             The Working Process
           </h2>
+        </div>
         
-        <div className="process-grid">
-          {processItems.map((item, index) => (
-            <div key={index} className="process-card">
-              <h3 className="process-title">{item.title}</h3>
-              <p className="process-description">{item.description}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-12 lg:mb-16">
+          {processData.map((feature) => (
+            <div
+              key={feature.id}
+              className="flex flex-col items-center text-center space-y-4"
+            >
+              <div className="bg-[#1AA939] rounded-lg  overflow-hidden">
+                <img src={feature.imgSrc} alt={feature.imgAlt} className="w-20 h-20 p-2" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                {feature.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm">
+                {feature.description}
+              </p>
             </div>
           ))}
-        </div>
-
-        <button className="new-project-btn">
-          Start New Project
-        </button>
       </div>
-    </section>
+
+        
+        
+        <div className="flex justify-center">
+          <button className="px-8 py-4 sm:px-10 sm:py-5 bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-base sm:text-lg hover:text-[#1AA939] hover:bg-[#fff] transition-colors duration-200 shadow-lg">
+            Start New Project
+          </button>
+        </div>
+        
+      </div>
+        </section>
+    </>
   );
 };
 
