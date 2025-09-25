@@ -44,37 +44,39 @@ const Hero: React.FC = () => {
           {/* Right Column - Image */}
          <div className="order-1 lg:order-2 mt-20 lg:mt-0">
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[650px] rounded-lg overflow-hidden"
-            style={{
-              backgroundImage: "url('/hero-bg.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-        >
-          {/* Left Icon */}
-          <div className="absolute top-4 left-2 sm:top-8 sm:left-6 bg-[#1AA939] rounded">
-            <img 
-              src="/hero-icon.png" 
-              alt="Left Icon" 
-              className="w-12 h-12 sm:w-16 sm:h-16" 
-            />
-          </div>
+  style={{
+    backgroundImage: "url('/hero-bg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Left Icon */}
+  <div className="absolute top-4 left-6 sm:top-8 sm:left-8 md:left-12 bg-[#1AA939] rounded z-10">
+    <img 
+      src="/hero-icon.png" 
+      alt="Left Icon" 
+      className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16" 
+    />
+  </div>
 
-          {/* Main Image */}
-          <img 
-            src="/hero-main.png" 
-            alt="Hero Image Placeholder"
-            className="w-full h-full object-contain sm:object-cover rounded-lg"
-          />
+  {/* Main Image Container */}
+  <div className="flex justify-center items-center h-full px-20 sm:px-24 md:px-20 lg:px-16">
+    <img 
+      src="/hero-main.png" 
+      alt="Hero Image Placeholder"
+      className="max-w-full max-h-full object-contain rounded-lg"
+    />
+  </div>
 
-          {/* Right Icon */}
-          <div className="absolute top-4 right-2 sm:top-8 sm:right-6 bg-[#1AA939] rounded">
-            <img 
-              src="/hero-icon2.png" 
-              alt="Right Icon" 
-              className="w-12 h-12 sm:w-16 sm:h-16 p-1" 
-            />
-          </div>
-        </div>
+  {/* Right Icon */}
+  <div className="absolute top-4 right-6 sm:top-8 sm:right-8 md:right-12 bg-[#1AA939] rounded z-10">
+    <img 
+      src="/hero-icon2.png" 
+      alt="Right Icon" 
+      className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 p-1" 
+    />
+  </div>
+</div>
 
 
           </div>
