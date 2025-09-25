@@ -3,6 +3,84 @@ import "./Hero.css"
 import { Link } from "react-router-dom"
 
 const Hero: React.FC = () => {
+  const processData = [
+  {
+    id: 1,
+    imgSrc: "/wp-1.png",
+    imgAlt: "Feature 1",
+    title: "Result and Report",
+    description:
+      "Existing informed decision-making and fostering continued improvement across various fields",
+  },
+  {
+    id: 2,
+    imgSrc: "/wp-2.png",
+    imgAlt: "Feature 2",
+    title: "Activity Management",
+    description:
+      "Focuses on optimising context workflow, ensuring collaborative, and ensuring efficient resource allocation.",
+  },
+  {
+    id: 3,
+    imgSrc: "/wp-3.png",
+    imgAlt: "Feature 3",
+    title: "Keyword Process",
+    description:
+      "Authorised the transaction, and confirming the payment to complete a particular security and efficiently.",
+  },
+];
+const whyDataLeft = [
+  {
+    id: 1,
+    title: "Educesol",
+    description:
+      "Educesol is an exceptional educational institution fostering growth and innovation.",
+    image: "/why1.png",
+    alt: "Student Management",
+  },
+  {
+    id: 2,
+    title: "Works Any Device",
+    description:
+      "Seamless Access Across All Your Devices with Our Versatile Platform",
+    image: "/why2.png",
+    alt: "Grade Tracking",
+  },
+  {
+    id: 3,
+    title: "Mobile-First Advantage",
+    description:
+      "Works seamlessly even in areas with limited connectivity.",
+    image: "/why3.png",
+    alt: "Attendance System",
+  },
+];
+const whyDataRight = [
+  {
+    id: 1,
+    title: "All-in-One Platform",
+    description: "Payments, academics, and communication in one place.",
+    image: "/why4.png",
+    alt: "Student Management",
+  },
+  {
+    id: 2,
+    title: "Affordable & Scalable",
+    description: "Designed for schools of all sizes at a cost-effective price.",
+    image: "/why5.png",
+    alt: "Grade Tracking",
+  },
+  {
+    id: 3,
+    title: "Built for Africa",
+    description: "Tailored to the real challenges of Nigerian and African schools.",
+    image: "/why6.png",
+    alt: "Attendance System",
+  },
+];
+
+
+
   return (
     <>
     <section className="hero" id="home">
@@ -162,73 +240,121 @@ const Hero: React.FC = () => {
         
         {/* Three Columns Container */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-12 lg:mb-16">
-          
-          {/* Column 1 */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-full max-w-xs h-48 sm:h-56 bg-gray-300 rounded-lg overflow-hidden">
-              <img 
-                src="https://via.placeholder.com/300x200/e5e7eb/6b7280?text=Feature+1" 
-                alt="Feature 1"
-                className="w-full h-full object-cover"
-              />
+          {processData.map((feature) => (
+            <div
+              key={feature.id}
+              className="flex flex-col items-center text-center space-y-4"
+            >
+              <div className="bg-[#1AA939] rounded-lg  overflow-hidden">
+                <img src={feature.imgSrc} alt={feature.imgAlt} className="w-20 h-20 p-2" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                {feature.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm">
+                {feature.description}
+              </p>
             </div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">
-              Smart Analytics
-            </h3>
-            <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm">
-              Get comprehensive insights into student performance, attendance patterns, and 
-              institutional metrics with our advanced analytics dashboard.
-            </p>
-          </div>
-          
-          {/* Column 2 */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-full max-w-xs h-48 sm:h-56 bg-gray-300 rounded-lg overflow-hidden">
-              <img 
-                src="https://via.placeholder.com/300x200/e5e7eb/6b7280?text=Feature+2" 
-                alt="Feature 2"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">
-              Easy Management
-            </h3>
-            <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm">
-              Streamline administrative tasks with intuitive tools for student enrollment, 
-              scheduling, grading, and communication all in one centralized platform.
-            </p>
-          </div>
-          
-          {/* Column 3 */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-full max-w-xs h-48 sm:h-56 bg-gray-300 rounded-lg overflow-hidden">
-              <img 
-                src="https://via.placeholder.com/300x200/e5e7eb/6b7280?text=Feature+3" 
-                alt="Feature 3"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-white">
-              24/7 Support
-            </h3>
-            <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm">
-              Access round-the-clock technical support and dedicated account management 
-              to ensure your institution runs smoothly without interruption.
-            </p>
-          </div>
-          
-        </div>
+          ))}
+      </div>
+
         
         {/* Centrally Aligned Button */}
         <div className="flex justify-center">
-          <button className="px-8 py-4 sm:px-10 sm:py-5 bg-white text-gray-900 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-            Learn More About Features
+          <button className="px-8 py-4 sm:px-10 sm:py-5 bg-[#1AA939] text-[#fff] rounded-lg font-semibold text-base sm:text-lg hover:text-[#1AA939] hover:bg-[#fff] transition-colors duration-200 shadow-lg">
+            Start New Project
           </button>
         </div>
         
       </div>
-    </section>
+        </section>
 
+      {/* Why Eduscesol */}
+
+        <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Main Header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1AA939] leading-tight">
+            WHY EDUCESOL?
+          </h2>
+        </div>
+        
+    
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          
+          {/* First Column - Image on Right */}
+          
+           <div className="space-y-8">
+      {whyDataLeft.map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col lg:grid lg:grid-cols-2 gap-4 items-center lg:items-start text-center lg:text-left"
+          >
+          
+            <div className="w-24 h-24 bg-[#101046] rounded-lg overflow-hidden mb-4 lg:mb-0 lg:order-2">
+              <img
+                src={item.image}
+                alt={item.alt}
+                className="w-full h-full p-2 object-cover"
+              />
+            </div>
+
+            <div className="space-y-3 lg:order-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
+                {item.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+        </div>
+          
+          {/* Second/Middle Column - Single Large Image */}
+          <div className="flex justify-center items-center">
+            <div className="w-full   rounded-lg overflow-hidden">
+              <img 
+                src="/why-phone.png" 
+                alt="Main Feature"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
+          {/* Third Column - Image on Left */}
+  <div className="space-y-8">
+            {whyDataRight.map((item) => (
+              <div
+                key={item.id}
+                 className="flex flex-col lg:grid lg:grid-cols-2 gap-4 items-center lg:items-start text-center lg:text-left"
+              >
+                {/* Image section */}
+                <div className="w-24 h-24 bg-[#101046] rounded-lg overflow-hidden mb-4 lg:mb-0">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-full object-cover p-2"
+                  />
+                </div>
+
+                {/* Text section */}
+                <div className="flex-1 text-center md:text-left">
+                  <p className="text-2xl text-[#101046] font-bold mb-2">{item.title}</p>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </div>
+            ))}
+</div>
+
+
+          
+        </div>
+        
+      </div>
+    </section>
     </>
 
   )
