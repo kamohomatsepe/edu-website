@@ -8,9 +8,6 @@ interface Feature {
 }
 
 const HomeFeatures: React.FC = () => {
-  const laptopIcon =
-    "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%230079a5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='4' width='18' height='12' rx='2'/><path d='M2 20h20'/><path d='M8 20h8'/></svg>";
-
   const features: Feature[] = [
     {
       icon: '/feature1.png',
@@ -35,7 +32,7 @@ const HomeFeatures: React.FC = () => {
   return (
     <section className="features section" id="features">
       <div className="container">
-        <h2 className="section-title" style={{ color: "var(--primary-green)" }}>
+        <h2 className="section-title text-[#1AA939]" t>
           Key Features
         </h2>
 

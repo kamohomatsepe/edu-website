@@ -43,29 +43,52 @@ const FAQ: React.FC = () => {
   }
 
   return (
-    <section className="faq section" id="faq">
-      <div className="container">
-        <h2 className="section-title ">FAQ's</h2>
+    <section className="bg-white py-12">
+  <div className="max-w-4xl mx-auto px-4">
+    <h2 className="text-4xl font-bold  text-[#1AA939] text-center mb-8">FAQ's</h2>
 
-        <div className="faq-list">
-          {faqItems.map((item, index) => (
-            <div key={index} className="faq-item">
-              <button
-                className={`faq-question ${openIndex === index ? "active" : ""}`}
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-              >
-                <span>{item.question}</span>
-                <span className="faq-icon">{openIndex === index ? "−" : "+"}</span>
-              </button>
-              <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
-                <p>{item.answer}</p>
-              </div>
-            </div>
-          ))}
+    <div className="space-y-5">
+      {faqItems.map((item, index) => (
+        <div
+          key={index}
+          className="rounded-lg shadow-md overflow-hidden"
+        >
+          <button
+            className={`w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-base md:text-lg transition-colors ${
+              openIndex === index ? "bg-[#101046] text-[#fff]" : "bg-[#101046] text-[#fff]"
+            }`}
+            onClick={() => toggleFAQ(index)}
+            aria-expanded={openIndex === index}
+          >
+            <span>{item.question}</span>
+            <span
+              className={`flex items-center justify-center rounded-full font-bold transition-transform duration-300 ${
+                openIndex === index ? "rotate-180" : ""
+              } ${
+                openIndex === index
+                  ? "bg-green-600 text-white"
+                  : "bg-green-600 text-white"
+              } w-7 h-7 md:w-8 md:h-8`}
+            >
+              {openIndex === index ? "−" : "+"}
+            </span>
+          </button>
+
+          <div
+            className={`transition-all duration-300 overflow-hidden bg-white ${
+              openIndex === index
+                ? "max-h-52 px-6 py-5"
+                : "max-h-0 px-6 py-0"
+            }`}
+          >
+            <p className="text-gray-600 leading-relaxed m-0">{item.answer}</p>
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+  </section>
+
   )
 }
 

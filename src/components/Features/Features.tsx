@@ -1,13 +1,13 @@
 import React from 'react';
-import './Features.css';
+// import './Features.css';
 
 // Define types for testimonial data
-interface Testimonial {
-  name: string
-  website: string
-  review: string
-  avatar: string
-}
+// interface Testimonial {
+//   name: string
+//   website: string
+//   review: string
+//   avatar: string
+// }
 
 // Define types for download step data
 interface DownloadStep {

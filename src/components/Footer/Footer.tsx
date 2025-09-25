@@ -65,30 +65,37 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          {footerSections.map((section, index) => (
-            <div key={index} className="footer-section">
-              <h3 className="footer-title">{section.title}</h3>
-              <div className="footer-text">
-                {Array.isArray(section.content) && typeof section.content[0] === "string"
-                  ? section.content.map((item, itemIndex) => (
-                      <p key={itemIndex} className="footer-paragraph">
-                        {item}
-                      </p>
-                    ))
-                  : section.content}
-              </div>
-            </div>
-          ))}
+    <footer className="bg-[#101046] text-white py-10 md:py-16">
+  <div className="max-w-6xl mx-auto px-4">
+    {/* Top content */}
+    <div className="grid gap-8 md:gap-10 lg:gap-12 mb-10 md:mb-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      {footerSections.map((section, index) => (
+        <div key={index} className="flex flex-col text-center md:text-left">
+          <h3 className="text-lg font-bold mb-5 relative inline-block after:content-[''] after:block after:w-12 after:h-[3px] after:bg-green-600 after:mt-2 after:mx-auto md:after:mx-0">
+            {section.title}
+          </h3>
+          <div className="text-white/80 leading-relaxed">
+            {Array.isArray(section.content) && typeof section.content[0] === "string"
+              ? section.content.map((item, itemIndex) => (
+                  <p key={itemIndex} className="mb-3 text-sm">
+                    {item}
+                  </p>
+                ))
+              : section.content}
+          </div>
         </div>
+      ))}
+    </div>
 
-        <div className="footer-bottom">
-          <p>&copy; 2025 MetroBlue Tech System Ltd. Educesol Basic. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    {/* Bottom */}
+    <div className="border-t border-white/20 pt-5 text-center">
+      <p className="text-white/60 text-sm">
+        &copy; 2025 MetroBlue Tech System Ltd. Educesol Basic. All rights reserved.
+      </p>
+    </div>
+  </div>
+  </footer>
+
   )
 }
 
