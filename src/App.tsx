@@ -34,7 +34,7 @@ const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
   
   return (
-    <div className="page-container">
+    <div className="pt-16">
       <Routes location={location}>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<Navigate to="/" replace />} />

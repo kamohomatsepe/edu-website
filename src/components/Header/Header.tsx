@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className="bg-[#1AA939] py-4 fixed top-0 left-0 right-0 z-[1000] shadow-md">
+    <header className="bg-[#1AA939] py-2 fixed top-0 left-0 right-0 z-[1000] shadow-md">
   <div className="container mx-auto px-4">
     <div className="flex items-center justify-between">
       
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
             <li key={index}>
               <Link
                 to={item.href}
-                className="text-white font-medium flex items-center gap-1 transition-opacity duration-300 hover:opacity-80"
+                className="text-white text-xl font-medium flex items-center gap-1 transition-opacity duration-300 hover:opacity-80"
               >
                 {item.label}
               </Link>
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
       <div className="hidden md:flex items-center">
           <Link to="/contact">
         <button className="flex items-center gap-2 bg-white text-[#1AA939] border-2 border-white px-4 py-2 rounded transition-colors duration-300 hover:bg-transparent hover:text-white">
-          <span className="p-2 w-8">
+          <span className="p-1 w-8">
             <img src="/nav-arrow.png" alt="" />
           </span>
           Get started

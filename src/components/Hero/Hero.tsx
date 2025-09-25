@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <>
     {/* Hero */}
-     <section className="w-full min-h-screen  py-12 px-4 sm:px-6 lg:px-8 mb-4 ">
+     <section className="w-full min-h-screen   px-4 sm:px-6 lg:px-8 mb-4 ">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           
