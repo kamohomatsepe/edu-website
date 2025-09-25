@@ -13,19 +13,19 @@ const HomeFeatures: React.FC = () => {
 
   const features: Feature[] = [
     {
-      icon: laptopIcon,
+      icon: '/feature1.png',
       title: "Full Admin Controls",
       description:
         "Manage students, staff, classes, and operations centrally.",
     },
     {
-      icon: laptopIcon,
+      icon: '/feature2.png',
       title: "Attendance & Records",
       description:
         "Real-time tracking and automated academic reporting.",
     },
     {
-      icon: laptopIcon,
+      icon: '/feature3.png',
       title: "Finance & Fees",
       description:
         "Secure, automated payment collection and receipts.",
@@ -40,16 +40,21 @@ const HomeFeatures: React.FC = () => {
         </h2>
 
         <div className="features-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">
-                <img src={feature.icon || "/placeholder.svg"} alt={`${feature.title} icon`} />
-              </div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </div>
-          ))}
+  {features.map((feature, index) => (
+    <div key={index} className="feature-card text-center">
+      <div className="feature-icon w-16 h-16 flex items-center justify-center rounded-full bg-[#ADF9A6]">
+        <img 
+          src={feature.icon} 
+          alt={`${feature.title} icon`} 
+          className="w-8 h-8 object-contain" 
+        />
+      </div>
+      <h3 className="feature-title mt-3 font-semibold text-lg">{feature.title}</h3>
+      <p className="feature-description text-gray-600">{feature.description}</p>
+    </div>
+  ))}
         </div>
+
       </div>
     </section>
   )

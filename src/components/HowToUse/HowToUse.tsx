@@ -1,5 +1,5 @@
 import type React from "react"
-import "./HowToUse.css"
+import { Link } from "react-router-dom"
 
 interface Step {
   number: string
@@ -30,35 +30,55 @@ const HowToUse: React.FC = () => {
   ]
 
   return (
-    <section className="how-to-use">
-      <div className="container">
-        <div className="how-to-use-content">
-          <div className="phone-mockup">
+    <section className="bg-[#101046] text-white py-16 md:py-20">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+          
+          {/* Phone Mockup */}
+          <div className="flex justify-center items-center order-last md:order-first">
             <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=60"
+              src="/iphone.png"
               alt="Mobile and laptop showing learning app interface"
-              className="phone-image"
+              className="max-w-full h-auto max-h-[650px] rounded-lg shadow-lg"
             />
           </div>
 
-          <div className="steps-content">
-            <h2 className="how-to-use-title">HOW TO USE THE APP</h2>
+          {/* Steps */}
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1AA939] mb-8 p-3">
+              HOW TO USE THE APP
+            </h2>
 
-            <div className="steps-list">
+            <div className="space-y-6 mb-8">
               {steps.map((step, index) => (
-                <div key={index} className="step-item">
-                  <h3 className="step-title">
-                    <span className="step-number">{step.number}</span>
+                <div key={index}>
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
+                    <span className="text-[#1AA939] font-bold mr-2">{step.number}</span>
                     {step.title}
                   </h3>
-                  <p className="step-description">{step.description}</p>
+                  <p className="text-white/90 leading-relaxed text-sm md:text-base text-justify">
+                    {step.description}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="store-badges">
-              <a href="#" className="store-badge-btn" aria-label="Get it on Google Play">Google Play</a>
-              <a href="#" className="store-badge-btn" aria-label="Download on the App Store">App Store</a>
+            {/* Store Badges */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <Link
+                to="#"
+                aria-label="Get it on Google Play"
+                className="inline-block px-5 py-2.5 rounded-lg bg-[#1AA939] text-white font-semibold shadow-md transition duration-200 hover:-translate-y-1 hover:bg-green-600"
+              >
+                Google Play
+              </Link>
+              <Link
+                to="#"
+                aria-label="Download on the App Store"
+                className="inline-block px-5 py-2.5 rounded-lg bg-[#1AA939] text-white font-semibold shadow-md transition duration-200 hover:-translate-y-1 hover:bg-green-600"
+              >
+                App Store
+              </Link>
             </div>
           </div>
         </div>

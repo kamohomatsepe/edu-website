@@ -29,7 +29,7 @@ const WhoAreWe: React.FC = () => {
             </p>
             
             {/* Sub text */}
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl text-[#fff]">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl text-[#fff] ">
               Educesol Basic is a groundbreaking school management solution developed by MetroBlue Tech System Ltd. We are committed to transforming the educational landscape in Nigeria and across Africa by making school operations simple, transparent, and affordable.
             </p>
             

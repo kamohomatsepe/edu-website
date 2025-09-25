@@ -1,13 +1,16 @@
 
 import React from 'react';
-// interface ProcessItem {
-//   title: string;
-//   description: string;
-// }
+interface ProcessItem {
+  id: number;
+  title: string;
+  description: string;
+  imgSrc?: string;
+  imgAlt?: string;
+}
 
 const WorkingProcess: React.FC = () => {
   
-  const processData = [
+  const processData:ProcessItem[] = [
   {
     id: 1,
     imgSrc: "/wp-1.png",
