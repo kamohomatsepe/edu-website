@@ -67,7 +67,7 @@ const FAQ: React.FC = () => {
                   : "bg-green-600 text-white"
               } w-7 h-7 md:w-8 md:h-8`}
             >
-              {openIndex === index ? "−" : "+"}
+              {openIndex === index ? "-" : "+"}
             </span>
           </button>
 
