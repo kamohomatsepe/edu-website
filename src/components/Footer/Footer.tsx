@@ -40,37 +40,42 @@ const Footer: React.FC = () => {
     {
       title: "CONTACT DETAILS",
       content: [
-        <div key="contact" className="contact-info">
-          <div className="contact-item mt-2">
-            <span className="contact-icon">
-              <img src="/globe.svg" alt="website" />
-            </span>
+        <div key="contact" className="contact-info flex flex-col gap-2">
+      {/* Website */}
+        <div className="contact-item flex items-center gap-2">
+          <a href="https://www.educesol.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <img src="/globe.svg" alt="website" className="w-6 h-6" />
             <span>www.educesol.com</span>
-          </div>
-          <div className="contact-item mt-2">
-            <span className="contact-icon">
-              <span className="contact-icon">
-              <img src="mail.svg" alt="mail" />
-            </span>
-            </span>
+          </a>
+        </div>
+
+        {/* Email */}
+        <div className="contact-item flex items-center gap-2">
+          <a href="mailto:contact@metrobluets.com" className="flex items-center gap-2">
+            <img src="/mail.svg" alt="mail" className="w-6 h-6" />
             <span>contact@metrobluets.com</span>
-          </div>
-          <div className="contact-item mt-2">
-            <span className="contact-icon">
-              <span className="contact-icon">
-              <img src="phone.svg" alt="phone" />
+          </a>
+        </div>
+
+          {/* Phone */}
+          <div className="contact-item flex items-center gap-2">
+            <img src="/phone.svg" alt="phone" className="w-6 h-6" />
+            <span>
+              <a href="tel:+2348162524860" className="hover:underline">+234 816 252 4860</a> | 
+              <a href="tel:+2349079125273" className="hover:underline">+234 907 912 5273</a>
             </span>
-            </span>
-            <span>+234 816 252 4860 | +234 907 912 5273</span>
           </div>
-          <div className="contact-item ">
-            <span className="contact-icon">
-              <img src="location.svg" alt="location" />
+
+          {/* Location */}
+          <div className="contact-item flex items-start gap-2">
+            <img src="/location.svg" alt="location" className="w-6 h-6 mt-1" />
+            <span>
+              MetroBlue Tech System Ltd (Official developer of Educesol)
+              322 Road, Opposite H-Close, Festac Town, Lagos, Nigeria
             </span>
-            <span>MetroBlue Tech System Ltd (Official developer of Educesol)
-                322 Road, Opposite H-Close, Festac Town, Lagos, Nigeria</span>
           </div>
-        </div>,
+        </div>
+,
       ],
     },
   ]
