@@ -1,13 +1,12 @@
 import React from 'react';
-// import './Features.css';
 
 // Define types for testimonial data
-// interface Testimonial {
-//   name: string
-//   website: string
-//   review: string
-//   avatar: string
-// }
+interface Testimonial {
+  name: string;
+  website: string;
+  review: string;
+  avatar: string;
+}
 
 // Define types for download step data
 interface DownloadStep {
@@ -24,26 +23,26 @@ interface StoreBadge {
 
 const Features: React.FC = () => {
   // Sample data for testimonials
-  // const testimonials: Testimonial[] = [
-  //   {
-  //     name: "Mrs. Adebayo School Administrator, Lagos",
-  //     website: "",
-  //     review: "The fee collection system is a game-changer. Parents can now pay easily, and we can track everything instantly.",
-  //     avatar: "/pic14.png?height=80&width=80",
-  //   },
-  //   {
-  //     name: "Mrs. Okonkwo, Proprietor, Enugu",
-  //     website: "",
-  //     review: "With Educesol, I always know how my children are performing. The app keeps me informed in real time.",
-  //     avatar: "/pic15.png?height=80&width=80",
-  //   },
-  //   {
-  //     name: "Mr. Alvan Ikoku, Proprietor, Abuja",
-  //     website: "",
-  //     review: "My students are now excelling in their studies and feeling more empowered than ever before.",
-  //     avatar: "/pic16.png?height=80&width=80",
-  //   },
-  // ];
+  const testimonials: Testimonial[] = [
+    {
+      name: "Mrs. Adebayo School Administrator, Lagos",
+      website: "",
+      review: "The fee collection system is a game-changer. Parents can now pay easily, and we can track everything instantly.",
+      avatar: "/pic14.png?height=80&width=80",
+    },
+    {
+      name: "Mrs. Okonkwo, Proprietor, Enugu",
+      website: "",
+      review: "With Educesol, I always know how my children are performing. The app keeps me informed in real time.",
+      avatar: "/pic15.png?height=80&width=80",
+    },
+    {
+      name: "Mr. Alvan Ikoku, Proprietor, Abuja",
+      website: "",
+      review: "My students are now excelling in their studies and feeling more empowered than ever before.",
+      avatar: "/pic16.png?height=80&width=80",
+    },
+  ];
 
   // Sample data for download steps
   const downloadSteps: DownloadStep[] = [
@@ -86,22 +85,28 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <div className="features-page">
-
-      
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <header className="hero-section">
-        <div className="container">
-          <div className="hero-content">
-            <h1>
-              <span className="text-green">Everything </span><span className="text-purple">You </span><span className="text-green"> <br /> Need </span><span className="text-purple">To</span><br/>
-              <span className="text-green">Run </span><span className="text-purple">Your </span><span className="text-green">School </span><span className="text-purple">Efficiently </span><span className="text-green"></span><br/>
-              <span className="text-purple"> </span>
+      <header className="py-20 bg-gradient-to-r from-blue-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <span className="text-green-600">Everything </span>
+              <span className="text-blue-600">You </span>
+              <span className="text-green-600 block md:inline">Need </span>
+              <span className="text-blue-600">To</span>
+              <br className="md:hidden"/>
+              <span className="text-green-600">Run </span>
+              <span className="text-blue-600">Your </span>
+              <span className="text-green-600">School </span>
+              <span className="text-blue-600">Efficiently</span>
             </h1>
-            <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 30px' }}>Discover and Harness your unique strengths and abilities to achieve personal growth and success.</p>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <button className="sign-up-button">
-                <span className="arrow-icon">→</span> Sign up Now
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Discover and Harness your unique strengths and abilities to achieve personal growth and success.
+            </p>
+            <div className="flex justify-center">
+              <button className="bg-[#E0FFEC] hover:bg-blue-700 text-green-600 font-bold py-3 px-8 rounded-full flex items-center transition-colors">
+                <span className="mr-2">→</span> Sign up Now
               </button>
             </div>
           </div>
@@ -109,56 +114,99 @@ const Features: React.FC = () => {
       </header>
 
       {/* Admin Controls Feature */}
-      <section className="feature-section admin-controls">
-        <div className="container">
-          <div className="feature-image">
-            <img src="/admin-dashboard.png" alt="Admin Dashboard" />
-          </div>
-          <div className="feature-content right-content">
-            <h2>Full Admin Controls</h2>
-            <p>Manage students, staff, classes, and operations centrally.</p>
-            <a href="/admin-controls" className="learn-more">Learn More <span className="arrow">→</span></a>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <img 
+                src="/admin-dashboard.png" 
+                alt="Admin Dashboard" 
+                className="rounded-lg shadow-xl w-full h-auto"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Full Admin Controls</h2>
+              <p className="text-gray-600 mb-6">Manage students, staff, classes, and operations centrally.</p>
+              <a 
+                href="/admin-controls" 
+                className="text-[#1AA939] hover:border-b-2 hover:border-[#1AA939] pb-1 font-medium inline-flex items-center transition-all duration-200"
+              >
+                Learn More <span className="ml-1">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Easy Fees Payment Feature */}
-      <section className="feature-section fees-payment">
-        <div className="container">
-          <div className="feature-content left-content">
-            <h2>Easy Fees Payment</h2>
-            <p>Secure, automated payment collection and receipts.</p>
-            <a href="/fees-payment" className="learn-more">Learn More <span className="arrow">→</span></a>
-          </div>
-          <div className="feature-image">
-            <img src="/payment-screens.png" alt="Payment Screens" />
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="md:w-1/2">
+              <img 
+                src="/payment-screens.png" 
+                alt="Payment Screens" 
+                className="rounded-lg shadow-xl w-full h-auto"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Easy Fees Payment</h2>
+              <p className="text-gray-600 mb-6">Secure, automated payment collection and receipts.</p>
+              <a 
+                href="/fees-payment" 
+                className="text-[#1AA939] hover:border-b-2 hover:border-[#1AA939] pb-1 font-medium inline-flex items-center transition-all duration-200"
+              >
+                Learn More <span className="ml-1">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Schedules Access Feature */}
-      <section className="feature-section schedules-access">
-        <div className="container">
-          <div className="feature-image">
-            <img src="/schedules-screens.png" alt="Schedules and Notes Screens" />
-          </div>
-          <div className="feature-content right-content">
-            <h2>Full Access to Schedules, Notes and Assignments</h2>
-            <p>Learning requires easy access to essential resources. We provide our users with full access to schedules, notes everything you need right at your fingertips.</p>
-            <a href="/schedules-access" className="learn-more">Learn More <span className="arrow">→</span></a>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <img 
+                src="/schedules-screens.png" 
+                alt="Schedules and Notes Screens" 
+                className="rounded-lg shadow-xl w-full h-auto"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Full Access to Schedules, Notes and Assignments</h2>
+              <p className="text-gray-600 mb-6">
+                Learning requires easy access to essential resources. We provide our users with full access to schedules, notes everything you need right at your fingertips.
+              </p>
+              <a 
+                href="/schedules-access" 
+                className="text-[#1AA939] hover:border-b-2 hover:border-[#1AA939] pb-1 font-medium inline-flex items-center transition-all duration-200"
+              >
+                Learn More <span className="ml-1">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Multi-platform Feature */}
-      <section className="feature-section multi-platform">
-        <div className="container">
-          <div className="feature-content left-content">
-            <h2>Accessible on all Platforms</h2>
-            <p>Learning should be flexible and accessible. That's why our platform is designed to be fully accessible across all devices.</p>
-          </div>
-          <div className="feature-image">
-            <img src="/multi-device.png" alt="Multiple Devices" />
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="md:w-1/2">
+              <img 
+                src="/multi-device.png" 
+                alt="Multiple Devices" 
+                className="rounded-lg shadow-xl w-full h-auto"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Accessible on all Platforms</h2>
+              <p className="text-gray-600">
+                Learning should be flexible and accessible. That's why our platform is designed to be fully accessible across all devices.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -197,34 +245,110 @@ const Features: React.FC = () => {
       </section> */}
 
       {/* Download Section */}
-      <section className="download-section">
-        <div className="container">
-          <div className="download-image">
-            <img src="/app-screenshot.png" alt="App Screenshot" />
+      <section className="py-20 bg-[#101046] text-white">
+        <div className="container mx-auto px-4">       
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* App Screenshots */}
+            <div className="lg:w-1/2 relative">
+              <div className="relative">
+                <img 
+                  src="/app-screenshot.png" 
+                  alt="App Screenshot 1" 
+                  className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
+                />
+
+              </div>
+            </div>
+            
+            {/* Download Content */}
+            <div className="lg:w-1/2 max-w-2xl mx-auto">
+            <div className="mb-12 max-w-2xl">
+            <h2 className="text-4xl font-bold mb-4 text-[#1AA939]">Download App</h2>
           </div>
-          <div className="download-content">
-            <h2>DOWNLOAD NOW!</h2>
-            
-            <div className="download-steps">
-              {downloadSteps.map((step, index) => (
-                <div className="step" key={index}>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+              <div className="space-y-8">
+                {downloadSteps.map((step, index) => (
+                  <div key={index} className="flex items-start gap-4">
+
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                      <p className="text-gray-300">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+                
+                <div className="pt-4">
+                  <h4 className="text-lg font-medium text-white mb-4">Available on:</h4>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex gap-4">
+                      <a 
+                        href={storeBadges[0].url} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block hover:opacity-90 transition-opacity"
+                      >
+                        <img 
+                          src={storeBadges[0].imageSrc}
+                          alt={storeBadges[0].altText}
+                          className="h-12 w-auto"
+                        />
+                      </a>
+                      <a 
+                        href={storeBadges[2].url} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block hover:opacity-90 transition-opacity"
+                      >
+                        <img 
+                          src={storeBadges[2].imageSrc}
+                          alt={storeBadges[2].altText}
+                          className="h-12 w-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className="flex gap-4">
+                      <a 
+                        href={storeBadges[1].url} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block hover:opacity-90 transition-opacity"
+                      >
+                        <img 
+                          src={storeBadges[1].imageSrc}
+                          alt={storeBadges[1].altText}
+                          className="h-12 w-auto"
+                        />
+                      </a>
+                      <a 
+                        href={storeBadges[3].url} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block hover:opacity-90 transition-opacity"
+                      >
+                        <img 
+                          src={storeBadges[3].imageSrc}
+                          alt={storeBadges[3].altText}
+                          className="h-12 w-auto"
+                        />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
-            
-            <div className="download-buttons">
-              <a href="/learn-more" className="learn-more-btn">Learn More</a>
-              <a href="/install" className="install-now-btn">Install Now</a>
-            </div>
-            
-            <div className="app-store-badges">
-              {storeBadges.map((badge, index) => (
-                <a href={badge.url} className="store-badge" key={index}>
-                  <img src={badge.imageSrc} alt={badge.altText} />
-                </a>
-              ))}
+                
+                <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <a 
+                    href="/learn-more" 
+                    className="bg-[#1AA939] hover:bg-[#168b31] text-white font-semibold py-3 px-8 rounded-lg text-center transition-colors inline-flex items-center justify-center"
+                  >
+                    Learn More
+                  </a>
+                  <a 
+                    href="/install" 
+                    className="border-2 border-white hover:bg-blue-600 hover:bg-opacity-10 text-white font-semibold py-3 px-8 rounded-lg text-center transition-colors inline-flex items-center justify-center"
+                  >
+                    Install Now
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
